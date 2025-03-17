@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+}
+h1{
+    margin-bottom: 36px;
+    font-size: 3em;
+    color: #333;
+}
+.drumkit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+/* Card Style */
+.element{
+    width: 120px;
+    height: 150px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out,background 0.3s;
+    position: relative;
+    transform-style:preserve-3d ;
+}
+.element:hover{
+    transform: scale(1.1);
+    background: #e3f2fd;
+}
+/* Flip Animation */
+.elemet.active{
+    transform: rotateY(180deg);
+}
+.element img{
+    width: 80px;
+    height: 80px;
+    display: none;
+}
+.element span{
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+    display: none;
+}
+/* Responsive Design */
+@media(max-width:768px){
+    .drumkit{
+        gap: 10px;
+    }
+    .element{
+        width: 100px;
+        height: 130px;
+        font-size: 22px;
+    }
+}
+@media(max-width:480px){
+    h1{
+        font-size: 1.5em;
+    }
+    .element{
+        width: 90px;
+        height: 120px;
+        font-size: 20px;
+    }
+}
